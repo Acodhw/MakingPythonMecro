@@ -1,0 +1,2 @@
+# MakingPythonMecro
+Study Group Project
