@@ -11,4 +11,5 @@ while not k == -1: # loop until not finded 3
     a = a[k+1:len(a)] # cut after '3'
     print(a) # print cut string
     k = a.find('3') # find next '3' index
+
     
