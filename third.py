@@ -18,3 +18,4 @@ for i in range(1, 21): # i has integar in range 1 ~ 20
     time.sleep(1)
 
 print(urlLs) # print urls
+driver.quit()
