@@ -35,3 +35,123 @@ else:
 
 #Second Work
 
+
+driver = webdriver.Chrome()
+driver.get('http://capszzang.gq/')
+time.sleep(0.5)
+driver.find_element(
+    By.XPATH, '//*[@id="top-bar"]/div/nav/div/ul/li[1]/a').click() #CAPS wiki Link
+time.sleep(0.5)
+driver.find_element(
+    By.XPATH, '//*[@id="top-bar"]/div/nav/div/ul/li[1]/div/ul/li[4]/a').click() #CAPS wiki Link
+time.sleep(0.5)
+
+print("회장 : ", end="")
+print(driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[1]/li').text) # name info get
+print("정보 : ")
+driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[1]/li/a[2]').click() #Document input
+time.sleep(1)
+print(driver.find_element(By.XPATH, '/html/body/section[3]/div').text) #Document text get
+print()
+driver.back()
+
+print("------------------------------------------------------------")
+print("부회장 : ", end="")
+print(driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[2]/li').text)
+print("정보 : ")
+driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[2]/li/a[2]').click() 
+time.sleep(1)
+print(driver.find_element(By.XPATH, '/html/body/section[3]/div').text)
+print()
+driver.back()
+
+print("------------------------------------------------------------")
+print("학술부 : ")
+ls = driver.find_elements(By.XPATH, '/html/body/section[2]/div/ul[3]/li') #get list value of page wiki list
+j = 1
+for i in ls: #loop
+    print(j)
+    print(driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[3]/li['+ str(j) +']/a[2]').text, end = ", ")
+    print("정보 : ")
+    driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[3]/li['+ str(j) +']/a[2]').click() 
+    time.sleep(1)
+    print(driver.find_element(By.XPATH, '/html/body/section[3]/div').text)
+    print()
+    driver.back()
+    j+=1
+    
+
+print("------------------------------------------------------------")
+print("기획부 : ")
+ls = driver.find_elements(By.XPATH, '/html/body/section[2]/div/ul[4]/li')
+j = 1
+for i in ls:
+    print(j)
+    print(driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[4]/li['+ str(j) +']/a[2]').text, end = ", ")
+    print("정보 : ")
+    driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[4]/li['+ str(j) +']/a[2]').click() 
+    time.sleep(1)
+    print(driver.find_element(By.XPATH, '/html/body/section[3]/div').text)
+    print()
+    driver.back()
+    j+=1
+
+print("------------------------------------------------------------")
+print("관리부 : ")
+ls = driver.find_elements(By.XPATH, '/html/body/section[2]/div/ul[5]/li')
+j = 1
+for i in ls:
+    print(j)
+    print(driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[5]/li['+ str(j) +']/a[2]').text, end = ", ")
+    print("정보 : ")
+    driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[5]/li['+ str(j) +']/a[2]').click() 
+    time.sleep(1)
+    print(driver.find_element(By.XPATH, '/html/body/section[3]/div').text)
+    print()
+    driver.back()
+    j+=1
+
+print("------------------------------------------------------------")
+print("총무부 : ")
+ls = driver.find_elements(By.XPATH, '/html/body/section[2]/div/ul[6]/li')
+j = 1
+for i in ls:
+    print(j)
+    print(driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[6]/li['+ str(j) +']/a[2]').text, end = ", ")
+    print("정보 : ")
+    driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[6]/li['+ str(j) +']/a[2]').click() 
+    time.sleep(1)
+    print(driver.find_element(By.XPATH, '/html/body/section[3]/div').text)
+    print()
+    driver.back()
+    j+=1
+
+print("------------------------------------------------------------")
+print("홈페이지관리부 : ")
+ls = driver.find_elements(By.XPATH, '/html/body/section[2]/div/ul[7]/li')
+j = 1
+for i in ls:
+    print(j)
+    print(driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[7]/li['+ str(j) +']/a[2]').text, end = ", ")
+    print("정보 : ")
+    driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[7]/li['+ str(j) +']/a[2]').click() 
+    time.sleep(1)
+    print(driver.find_element(By.XPATH, '/html/body/section[3]/div').text)
+    print()
+    driver.back()
+    j+=1
+
+print("------------------------------------------------------------")
+print("편집부 : ")
+ls = driver.find_elements(By.XPATH, '/html/body/section[2]/div/ul[8]/li')
+j = 1
+for i in ls:
+    print(j)
+    print(driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[8]/li['+ str(j) +']/a[2]').text, end = ", ")
+    print("정보 : ")
+    driver.find_element(By.XPATH, '/html/body/section[2]/div/ul[8]/li['+ str(j) +']/a[2]').click() 
+    time.sleep(1)
+    print(driver.find_element(By.XPATH, '/html/body/section[3]/div').text)
+    print()
+    driver.back()
+    j+=1
